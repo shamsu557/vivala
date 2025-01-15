@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.navbar {
+    background: linear-gradient(45deg, #95999a, #303132);
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: #c2c9cf;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #ffffff; /* Keep white on hover */
+}
+
+.nav-link {
+    color: #f8f9fa !important;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #524f4f !important; /* Match white on hover for consistency */
+    background-color: #e0e6eb; /* Darker sky blue on hover */
+}
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: #212529;
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #f8f9fa !important; /* Keeping navbar text white */
+    }
+
+    /* White background for the hamburger icon */
+    .navbar-toggler {
+        background-color: white !important;
+        right:0;
+    }
+
+    .navbar-toggler-icon {
+        background-color:white !important;
+    }
+    .navbar-cancel {
+        display: none;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('vivala.jpg') no-repeat center center/cover;
+    color: rgb(109, 93, 93);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.hero-section p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #343a40;
+    text-align: center;
+}
+
+/* Cards */
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery */
+#gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.fixed-size {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Animations */
+.animated {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fall {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes rise {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.testimonial {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 15px;
+}
+
+.carousel-inner {
+    display: relative;
+    justify-content: center;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.carousel-item h5 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #e9ecef;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 10px solid #f3f3f3;
+    border-top: 8px solid #33373b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 3.5s linear infinite; /* Synchronize spinner duration */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+a {
+    text-decoration: none; /* Remove underline by default */
+    color: inherit; /* Optional: Inherit color from the parent element */
+}
+ 
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none; /* Ensure no underline appears on hover, focus, or click */
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, #54585a, #202223);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+    background-color: #1c6474;
+    }
+    .stats-section{
+        background-color: rgb(234, 238, 240);
+        color:rgb(22, 20, 20);
+    }
