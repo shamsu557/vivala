@@ -16,6 +16,11 @@ body {
     background: linear-gradient(45deg, #54585a, #202223);
     position: fixed;
     width: 100%;
+     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 20px;
 }
 
 .navbar-brand {
@@ -139,7 +144,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    height: 90vh;
+    height: 68vh;
     display: flex;
     justify-content: center;
     align-items: center;
