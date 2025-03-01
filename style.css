@@ -140,20 +140,30 @@ body {
         border: none;
         background: none;
     }
+    
 }
 
-/* Hero Section */
+/* Default Hero Section (for larger screens) */
 .hero-section {
-    height: 68vh;
+    height: 80vh; /* Default height for large screens */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
     background-size: cover;
-    background-position: center 23%; 
+    background-position: center 23%;
     background-image: linear-gradient(to right, rgba(0, 188, 212, 0.3), rgba(129, 212, 250, 0.3)), url('gallery8.jfif'); /* Sky blue gradient and image */
 }
+
+/* Media Query for Small Screens (phones, tablets) */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh; /* Adjust height for smaller screens */
+        background-position: center; /* Center the image better */
+    }
+}
+
 .hero-section h1 {
     font-size: 3.5rem;
     font-weight: bold;
